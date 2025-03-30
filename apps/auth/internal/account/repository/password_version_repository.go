@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/domain"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/domain"
 	"github.com/saas-flow/monorepo/libs/pagination"
 	"go.uber.org/fx"
 	"gorm.io/gorm"

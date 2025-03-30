@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/redis/go-redis/v9"
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/domain"
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/dto"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/domain"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/dto"
 	"github.com/saas-flow/monorepo/libs/rand"
 )
 

@@ -3,8 +3,8 @@ package usecase
 import (
 	"context"
 
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/domain"
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/dto"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/domain"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/dto"
 	"github.com/saas-flow/monorepo/libs/pagination"
 	"github.com/saas-flow/monorepo/libs/response"
 	"go.uber.org/fx"

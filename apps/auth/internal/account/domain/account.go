@@ -3,7 +3,7 @@ package domain
 import (
 	"context"
 
-	"github.com/saas-flow/monorepo/apps/auth/internal/user/dto"
+	"github.com/saas-flow/monorepo/apps/auth/internal/account/dto"
 	"github.com/saas-flow/monorepo/libs/pagination"
 )
 
