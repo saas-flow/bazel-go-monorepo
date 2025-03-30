@@ -1,0 +1,12 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "profiling",
+    srcs = ["profilling.go"],
+    importpath = "github.com/saas-flow/monorepo/libs/profiling",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_grafana_pyroscope_go//:pyroscope-go",
+        "@com_github_saas_flow_shared_libs//config",
+    ],
+)

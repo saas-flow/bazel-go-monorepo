@@ -1,0 +1,16 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "messaging",
+    srcs = [
+        "consumer.go",
+        "producer.go",
+    ],
+    importpath = "github.com/saas-flow/monorepo/libs/messaging",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//libs/config",
+        "@com_github_confluentinc_confluent_kafka_go//kafka",
+        "@org_uber_go_fx//:fx",
+    ],
+)

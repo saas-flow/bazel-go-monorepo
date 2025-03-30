@@ -1,0 +1,9 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "pagination",
+    srcs = ["pagination.go"],
+    importpath = "github.com/saas-flow/monorepo/libs/pagination",
+    visibility = ["//visibility:public"],
+    deps = ["@io_gorm_gorm//:gorm"],
+)

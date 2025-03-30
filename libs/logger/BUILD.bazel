@@ -1,0 +1,18 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "logger",
+    srcs = [
+        "buffer.go",
+        "logger.go",
+        "masking.go",
+    ],
+    importpath = "github.com/saas-flow/monorepo/libs/logger",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_natefinch_lumberjack//:lumberjack",
+        "@org_uber_go_fx//:fx",
+        "@org_uber_go_zap//:zap",
+        "@org_uber_go_zap//zapcore",
+    ],
+)

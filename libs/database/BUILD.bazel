@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "database",
+    srcs = ["db.go"],
+    importpath = "github.com/saas-flow/monorepo/libs/database",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_uptrace_opentelemetry_go_extra_otelgorm//:otelgorm",
+        "@io_gorm_gorm//:gorm",
+        "@org_uber_go_fx//:fx",
+        "@org_uber_go_zap//:zap",
+    ],
+)

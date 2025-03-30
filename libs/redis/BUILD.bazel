@@ -1,0 +1,12 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "redis",
+    srcs = ["redis.go"],
+    importpath = "github.com/saas-flow/monorepo/libs/redis",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_redis_go_redis_v9//:go-redis",
+        "@org_uber_go_fx//:fx",
+    ],
+)
