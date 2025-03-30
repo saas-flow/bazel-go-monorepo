@@ -1,4 +1,3 @@
-
 # Monorepo Development Guide
 
 ## 1. Introduction
@@ -14,8 +13,7 @@ Welcome to the monorepo! This guide will help you set up your development enviro
 │   ├── service-b/
 │   ├── service-c/
 ├── libs/            # Shared libraries
-├── tools/           # CI/CD scripts, utilities
-├── bazel/           # Bazel configuration files
+├── migrations/      # migrations file
 ├── go.mod           # Root Go module
 ├── MODULE.bazel     # Bazel module definition (Bzlmod)
 └── README.md
