@@ -1,0 +1,2 @@
+
+DROP TYPE IF EXISTS account_types CASCADE;
