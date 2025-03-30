@@ -1,0 +1,22 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "http",
+    srcs = [
+        "auth_handler.go",
+        "auth_router.go",
+    ],
+    importpath = "github.com/saas-flow/monorepo/apps/auth/internal/user/delivery/http",
+    visibility = ["//apps/auth:__subpackages__"],
+    deps = [
+        "//apps/auth/internal/user/domain",
+        "//apps/auth/internal/user/dto",
+        "//libs/middleware",
+        "//libs/rand",
+        "@com_github_gin_contrib_sessions//:sessions",
+        "@com_github_gin_gonic_gin//:gin",
+        "@com_github_google_uuid//:uuid",
+        "@com_github_redis_go_redis_v9//:go-redis",
+        "@org_uber_go_fx//:fx",
+    ],
+)

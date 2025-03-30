@@ -1,0 +1,16 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "usecase",
+    srcs = ["auth_usecase.go"],
+    importpath = "github.com/saas-flow/monorepo/apps/auth/internal/user/usecase",
+    visibility = ["//apps/auth:__subpackages__"],
+    deps = [
+        "//apps/auth/internal/user/domain",
+        "//apps/auth/internal/user/dto",
+        "//libs/pagination",
+        "//libs/response",
+        "@org_uber_go_fx//:fx",
+        "@org_uber_go_zap//:zap",
+    ],
+)

@@ -1,0 +1,19 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "repository",
+    srcs = [
+        "account_repository.go",
+        "auth_provider_repository.go",
+        "base.go",
+        "password_version_repository.go",
+    ],
+    importpath = "github.com/saas-flow/monorepo/apps/auth/internal/user/repository",
+    visibility = ["//apps/auth:__subpackages__"],
+    deps = [
+        "//apps/auth/internal/user/domain",
+        "//libs/pagination",
+        "@io_gorm_gorm//:gorm",
+        "@org_uber_go_fx//:fx",
+    ],
+)

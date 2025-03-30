@@ -1,0 +1,44 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+
+go_library(
+    name = "auth_lib",
+    srcs = [
+        "main.go",
+        "module.go",
+    ],
+    importpath = "github.com/saas-flow/monorepo/apps/auth",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//apps/auth/internal/user/delivery/http",
+        "//apps/auth/internal/user/repository",
+        "//apps/auth/internal/user/usecase",
+        "//libs/config",
+        "//libs/database",
+        "//libs/httpserver",
+        "//libs/logger",
+        "//libs/middleware",
+        "//libs/otelcol",
+        "//libs/redis",
+        "//libs/validator",
+        "@com_github_gin_contrib_cors//:cors",
+        "@com_github_gin_contrib_sessions//:sessions",
+        "@com_github_gin_contrib_sessions//redis",
+        "@com_github_gin_gonic_gin//:gin",
+        "@com_github_go_playground_universal_translator//:universal-translator",
+        "@com_github_joho_godotenv//:godotenv",
+        "@com_github_redis_go_redis_v9//:go-redis",
+        "@io_gorm_driver_postgres//:postgres",
+        "@io_gorm_gorm//:gorm",
+        "@io_opentelemetry_go_contrib_instrumentation_github_com_gin_gonic_gin_otelgin//:otelgin",
+        "@org_uber_go_fx//:fx",
+        "@org_uber_go_fx//fxevent",
+        "@org_uber_go_zap//:zap",
+    ],
+)
+
+go_binary(
+    name = "auth",
+    embed = [":auth_lib"],
+    visibility = ["//visibility:public"],
+)

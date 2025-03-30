@@ -1,0 +1,8 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "dto",
+    srcs = ["auth_dto.go"],
+    importpath = "github.com/saas-flow/monorepo/apps/auth/internal/user/dto",
+    visibility = ["//apps/auth:__subpackages__"],
+)
