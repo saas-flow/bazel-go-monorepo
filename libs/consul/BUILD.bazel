@@ -1,0 +1,13 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "consul",
+    srcs = ["consul.go"],
+    importpath = "github.com/saas-flow/monorepo/libs/consul",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//libs/config",
+        "@com_github_hashicorp_consul_api//:api",
+        "@org_uber_go_fx//:fx",
+    ],
+)
